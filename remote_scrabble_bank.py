@@ -82,7 +82,7 @@ class LetterBank:
 
         Returns
         -------
-        None.
+        str: a text message with details about the draw undo performed
 
         '''
         if len(self.history) == 0:
@@ -100,8 +100,8 @@ class LetterBank:
             message = 'Returned the last ' + str(num_tiles_returned) + \
                 ' drawn tiles to the bank, number of tiles in bank: ' + \
                 str(num_tiles) + '.'
-            print('last_drawn: ', last_drawn) #DEBUG
-            print('inv: ', self.inventory)
+            #print('last_drawn: ', last_drawn) #DEBUG
+            #print('inv: ', self.inventory)
                 
         return message
         
