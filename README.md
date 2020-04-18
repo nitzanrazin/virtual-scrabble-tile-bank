@@ -21,23 +21,27 @@ about changes to the board after each turn can be done by sharing a picture of t
 
 ## Instructions for playing a game of Scrabble using the virtual tile bank
 
-1. Before starting the game, choose the tile distribution and tile scores
-There are several different versions of the Hebrew Scrabble game, each with slightly different tile numbers and scores for the different letters.
-Before starting the game, you should decide how many tiles of each type to put in the tile bank, and how many points each tile is worth.
+1. Before starting the game, choose the tile distribution and tile scores.
+
+    There are several different versions of the Hebrew Scrabble game, each with slightly different tile numbers and scores for the different letters.
+Decide how many tiles of each type to put in the tile bank (pick a game version or freely set the amounts), and how many points each tile is worth.
 
 2. At each location, set up:
-a. a board game, and the game tiles face-up
-b. a video chat connection
-c. a means by which to share the state of the board after each turn, for example taking a picture and sending it to a group chat
+    1. A board game, and the game tiles face-up
+    2. A video chat connection
+    3. A means by which to share the state of the board after each turn, for example taking a picture and sending it to a group chat
 
 ## Instructions for running the tile bank
 ### Before the game starts:
 1. Set up a gmail account for sending the drawn tile lists
-It is highly recommended to set up a specialized account and not use a personal account for this, since sending messages from the account 
-from code requires lowering the security.
-[give link to instructions for setting up the account]
+It is highly recommended to set up a specialized account and not use a personal account for this, since 
+sending messages from Python code code requires lowering the account security, and since the password to this account
+will be saved to a plain text file, to be used by the virtual scrabble bank. 
+
+    Turn "Allow less secures apps" to ON: https://myaccount.google.com/lesssecureapps?pli=1
+
 2. Decide which tile distribution to use (if not all game sets used are the same, may decide to use the minimal amount available from each type, for example)
-3. Update settings
+3. Set up the game settings: enter the gmail account details, and set the tile distribution
 4. Enter player data (name and email)
 
 ### During the game:
@@ -54,7 +58,7 @@ Click "התחל משחק חדש" to return all tiles to the tile bank and start 
 3. Start the game, after each player's turn the tile bank manager should fill in the amount of tiles the player needs to draw from the bank,
 and click "הגרל" to draw the tiles and send a list of the drawn tiles to the players email.
 
-4. Notice that at the bottom of the virtual tile bank GUI, the status bar is updated to show the amount of tiles drawn, for which player, and the amount of tiles left in the bank.
+4. The status bar at the bottom of the virtual tile bank GUI is updated to show the amount of tiles drawn, for which player, and the amount of tiles left in the bank.
 
 5. In the case of a mistake in the tile drawing (for example, too many tiles drawn for a player, or tiles drawn for the wrong player), the last draw can be undone by clicking "בטל".
 
