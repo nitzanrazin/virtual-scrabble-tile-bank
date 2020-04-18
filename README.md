@@ -1,7 +1,7 @@
 # virtual-scrabble-tile-bank
 Virtual tile bank for playing Hebrew Scrabble (שבץ נא) in several remote locations, each using their own physical copy of the game.
 
-## Purpose
+## Overview
 This script allows playing a game of Hebrew Scrabble (שבץ נא) in multiple remote locations. It is assumed that in each location, there is a physical copy of the game board and tiles.
 This script should be used in addition to a group chat or similar solution for sharing the board state after each turn, and a video chat service for communication between the players during the game.
 When using this script to play remote Scrabble, all the tiles at each location should be placed face up, to allow finding specific tiles for
