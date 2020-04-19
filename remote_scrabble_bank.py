@@ -2,15 +2,36 @@
 import numpy as np
 
 class LetterBank:
-    def __init__(self):
+    def __init__(self, tile_distribution=None):
         '''
         initialize letter bank to include all letters (and 2 blank tiles)
 
         '''
-        #self.all_tiles = [6, 4, 1, 4, 8, 12, 1, 3, 1, 10, 2, 6, 6, 3, 1, 2, 3, 1, 2, 8, 6, 8, 2] # 2008 game version
-        self.all_tiles = [6, 4, 1, 4, 8, 12, 1, 2, 1, 10, 2, 6, 6, 3, 1, 2, 3, 1, 2, 8, 6, 8, 2] # 2008 version - 1 chet for more compatibility with 70s version
+        ##### TO DO: check code below, meant to verify valid input, give default value if non is given
+        # set distribution to default, in case None is given or invalid input is given
+        #self.tile_distribution = [6, 4, 1, 4, 8, 12, 1, 3, 1, 10, 2, 6, 6, 3, 1, 2, 3, 1, 2, 8, 6, 8, 2] # 2008 game version
+        self.tile_distribution = [6, 4, 1, 4, 8, 12, 1, 2, 1, 10, 2, 6, 6, 3, 1, 2, 3, 1, 2, 8, 6, 8, 2] # 2008 version - 1 chet for more compatibility with 70s version
+        # if valid input distribution is given (list of 23 integers), save it
+        if tile_distribution is not None:
+            try: # check that the input distribution is iterable (list, tuple, etc)
+                _ = iter(tile_distribution)
+            except TypeError as te:
+                print('ERROR: tile_distribution input to LetterBank __init__ must be iterable containing 23 integers')
+                print('Using default distribution instead of bad format input')
+                self.tile_distribution = [6, 4, 1, 4, 8, 12, 1, 2, 1, 10, 2, 6, 6, 3, 1, 2, 3, 1, 2, 8, 6, 8, 2] # 2008 version - 1 chet for more compatibility with 70s version
+            else: # input is iterable
+                if len(tile_distribution)==23: # input has the correct length
+                    try: # check that all elements of the distribution are integer or convertible to integer
+                        valid_input = all(isinstance(int(x), int) for x in tile_distribution)
+                    except ValueError:
+                        print('ERROR: tile_distribution input to LetterBank __init__ must be iterable containing 23 integers')
+                    else:
+                        if valid_input: # save input distribution
+                            self.tile_distribution = [int(x) for x in tile_distribution]
+        #####
+            
         # number of tiles in the bank for each type: aleph - tav, blank
-        self.inventory = self.all_tiles.copy()
+        self.inventory = self.tile_distribution.copy()
         
         self.ind_to_letter = {0: 'aleph', 1: 'bet', 2: 'gimel', 3: 'dalet', 4: 'he', 5: 'vav',
                               6: 'zayin', 7: 'het', 8: 'tet', 9: 'yod', 10: 'kaf', 11: 'lamed',
@@ -22,10 +43,10 @@ class LetterBank:
                               'samekh': 14, 'ayin': 15, 'pe': 16, 'tsadi': 17, 'qof': 18, 'resh': 19, 'shin': 20,
                               'tav': 21, 'blank': 22}
         
-        self.ind_to_heb_ord = {0: 1488, 1: 1489, 2: 1490, 3: 1491, 4: 1492, 5: 1493,
-                              6: 1494, 7: 1495, 8: 1496, 9: 1497, 10: 1499, 11: 1500,
-                              12: 1502, 13: 1504, 14: 1505, 15: 1506, 16: 1508, 17: 1510,
-                              18: 1511, 19: 1512, 20: 1513, 21: 1514, 22: 42}
+        #self.ind_to_heb_ord = {0: 1488, 1: 1489, 2: 1490, 3: 1491, 4: 1492, 5: 1493,
+        #                      6: 1494, 7: 1495, 8: 1496, 9: 1497, 10: 1499, 11: 1500,
+        #                      12: 1502, 13: 1504, 14: 1505, 15: 1506, 16: 1508, 17: 1510,
+        #                      18: 1511, 19: 1512, 20: 1513, 21: 1514, 22: 42}
         
         self.history = [] # history of all letters drawn, to allow "back"
         
@@ -35,7 +56,7 @@ class LetterBank:
         reset history
 
         '''
-        self.inventory = self.all_tiles.copy() # reset tile bank to include all game tiles
+        self.inventory = self.tile_distribution.copy() # reset tile bank to include all game tiles
         self.history = [] # history of all letters drawn, to allow "back"
         
     def draw(self, n):
@@ -104,6 +125,21 @@ class LetterBank:
             #print('inv: ', self.inventory)
                 
         return message
+    
+    def set_tile_distribution(self,tile_distribution):
+        '''
+
+        Parameters
+        ----------
+        tile_distribution : list containing 23 integer
+            DESCRIPTION.
+
+        Returns
+        -------
+        None.
+
+        '''
+        self.tile_distribution = tile_distribution
         
         
             
