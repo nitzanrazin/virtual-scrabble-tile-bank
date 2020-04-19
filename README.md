@@ -32,12 +32,16 @@ Decide how many tiles of each type to put in the tile bank (pick a game version 
     3. A means by which to share the state of the board after each turn, for example taking a picture and sending it to a group chat
 
 ## Instructions for running the tile bank
+Run `scrabble_bank_gui.py`.
+
 ### Before the game starts:
 1. Set up a gmail account for sending the drawn tile lists
 
     It is highly recommended to set up a specialized account and not use a personal account for this, since sending messages from Python code code requires lowering the account security, and since the password to this account will be saved to a plain text file, to be used by the virtual scrabble bank. 
 
     Turn "Allow less secures apps" to ON: https://myaccount.google.com/lesssecureapps?pli=1
+
+    Alternatively, the virtual tile bank can be used without email messages, by unticking the "שלח מייל" option. Then the tile bank manager will have to see which tiles are drawn using the history text box, and let players know what tiles were drawn for them.
 
 2. Decide which tile distribution to use (if not all game sets used are the same, may decide to use the minimal amount available from each type, for example)
 
