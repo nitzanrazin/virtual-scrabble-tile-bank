@@ -413,15 +413,17 @@ class TileBankGUI:
         email_label = tk.Label(mail_labelframe, text="E-mail")
         password_label = tk.Label(mail_labelframe, text="Password")
         email_entry = tk.Entry(mail_labelframe)
-        
-        full_gmail = self.gmail_address.rstrip() # remove trailing EOL character with rstrip
-        if full_gmail[-10:]=='@gmail.com':
-            gmail_username = full_gmail[:-10]
-        else:
-            gmail_username = ''
-        email_entry.insert(0, gmail_username)
         password_entry = tk.Entry(mail_labelframe, show="*")
-        password_entry.insert(0, self.gmail_password)
+       
+        if self.gmail_address is not None:
+            full_gmail = self.gmail_address.rstrip() # remove trailing EOL character with rstrip
+            if full_gmail[-10:]=='@gmail.com':
+                gmail_username = full_gmail[:-10]
+            else:
+                gmail_username = ''
+            email_entry.insert(0, gmail_username)
+
+            password_entry.insert(0, self.gmail_password)
 
         email_label.grid(row=0, sticky=tk.E)
         password_label.grid(row=1, sticky=tk.E)

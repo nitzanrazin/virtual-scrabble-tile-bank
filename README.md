@@ -1,9 +1,9 @@
 # virtual-scrabble-tile-bank
 Virtual tile bank for playing Hebrew Scrabble (שבץ נא) in several remote locations, each using their own physical copy of the game.
 
-Scrabble Virtual Tile Bank             |  Settings Window
+Virtual Scrabble Tile Bank             |  Settings Window
 :-------------------------:|:-------------------------:
-<img src=".\docs\mainGUI-draw.png" title="Scrabble Virtual Tile Bank" width="350"/>  |  <img src=".\docs\settingsWindow.png" title="Settings Window" width="200"/>
+<img src=".\docs\mainGUI-draw.png" title="Virtual Scrabble Tile Bank" width="350"/>  |  <img src=".\docs\settingsWindow.png" title="Settings Window" width="200"/>
 
 ## Overview
 Use the virtual tile bank to play a game of Hebrew Scrabble (שבץ נא) in multiple remote locations, each having a physical copy of the game. The virtual tile bank maintains a common tile pool, from which tiles are drawn and sent to players via email. Physical tiles at each location should be placed *face up*, so tiles can be located when needed for
