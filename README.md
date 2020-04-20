@@ -6,8 +6,7 @@ Virtual Scrabble Tile Bank             |  Settings Window
 <img src=".\docs\mainGUI-draw.png" title="Virtual Scrabble Tile Bank" width="350"/>  |  <img src=".\docs\settingsWindow.png" title="Settings Window" width="200"/>
 
 ## Overview
-Use the virtual tile bank to play a game of Hebrew Scrabble (שבץ נא) in multiple remote locations, each having a physical copy of the game. The virtual tile bank maintains a common tile pool, from which tiles are drawn and sent to players via email. Physical tiles at each location should be placed *face up*, so tiles can be located when needed for
-1. a player taking tiles matching the ones drawn for them by the virtual tile bank to put on their rack
+Use the virtual tile bank to play a game of Hebrew Scrabble (שבץ נא) in multiple remote locations, each having a physical copy of the game. The virtual tile bank maintains a common tile pool, from which tiles are drawn and sent to players via email. Physical tiles at each location should be placed *face up*, so tiles can be located when needed for 1. a player taking tiles matching the ones drawn for them by the virtual tile bank to put on their rack
 2. placing tiles on the game board following a remote player's turn.
 Thus, each player has more information about the tile bank and the tiles in other players' racks than in a regular Scrabble game with face down tiles in the tile bank.<sup>[1](#footnote1)</sup>
 
@@ -72,7 +71,7 @@ and click "הגרל" to draw the tiles and send a list of the drawn tiles to the
 ## Requirements
 * Pmw
 
-install by: pip install Pmw
+Install by: pip install Pmw
 
 This package is used to create tooltips
 
