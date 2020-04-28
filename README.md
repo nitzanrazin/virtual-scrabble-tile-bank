@@ -34,7 +34,7 @@ Decide how many tiles of each type to put in the tile bank (pick a game version 
 Run `scrabble_bank_gui.py`.
 
 ### Before the game starts:
-1. Set up a gmail account for sending the drawn tile lists
+1. Set up a gmail account for sending the drawn tile lists.
 
     It is highly recommended to set up a specialized account and not use a personal account for this, since sending messages from Python code code requires lowering the account security, and since the password to this account will be saved to a plain text file, to be used by the virtual scrabble bank. 
 
@@ -42,7 +42,7 @@ Run `scrabble_bank_gui.py`.
 
     Alternatively, the virtual tile bank can be used without email messages, by unticking the "שלח מייל" option. Then the tile bank manager will have to see which tiles are drawn using the history text box, and let players know what tiles were drawn for them.
 
-2. Decide which tile distribution to use (if not all game sets used are the same, may decide to use the minimal amount available from each type, for example)
+2. Decide which tile distribution to use (if not all game sets used are the same, may decide to use the minimal amount available from each type, for example).
 
 3. Set up the game settings: click the settings button on the top left. Enter the gmail username and password for the account to be used to send drawn tiles to players, and set the tile distribution.
 
@@ -59,7 +59,7 @@ but can be hidden by clicking the "הסתר היסטוריה" button. It can be 
 so at this point it would be convenient to re-order the player list by drag and drop.
 Click "התחל משחק חדש" to return all tiles to the tile bank and start the game.
 
-2. Draw 7 tiles for each player
+2. Draw 7 tiles for each player.
 
 3. Start the game. After each player's turn the tile bank manager should fill in the amount of tiles the player needs to draw from the bank,
 and click "הגרל" to draw the tiles and send a list of the drawn tiles to the player's email.
@@ -73,7 +73,7 @@ and click "הגרל" to draw the tiles and send a list of the drawn tiles to the
 
 Install by: pip install Pmw
 
-This package is used to create tooltips
+This package is used to create tooltips.
 
 ---
 <a name="footnote1">[1]</a>: For the (unrealistic) case of
