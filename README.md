@@ -77,7 +77,7 @@ This package is used to create tooltips.
 
 ---
 <a name="footnote1">[1]</a>: For the (unrealistic) case of
-<img src="https://render.githubusercontent.com/render/math?math=N=\infty">
+<img src="https://render.githubusercontent.com/render/math?math=N\to \infty">
 tile bank tiles at each location, this information reduces to zero and the game is identical to regular Scrabble.
 Being a physicist, I still suggest using it for
 <img src="https://render.githubusercontent.com/render/math?math=N=2">
