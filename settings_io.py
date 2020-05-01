@@ -14,7 +14,8 @@ def load_email(filename):
         gmail_user = f.readline()
         gmail_password = f.readline()
         f.close()
-        return gmail_user, gmail_password
+        return gmail_user.rstrip(), gmail_password.rstrip() # remove trailing newline character
+
     except FileNotFoundError:
         print(filename, " not found")
         return None, None
