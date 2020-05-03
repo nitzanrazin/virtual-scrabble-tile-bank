@@ -332,10 +332,7 @@ class TileBankGUI:
         self.status.config(text=text) # write to status bar
         
         # write which tiles were drawn to the text box
-        self.text.insert(tk.INSERT, textbox_message + "\n")
-        #self.text.insert(tk.END, "\n" + textbox_message) # write to end of text
-        # use leading instead of trailing \n to allow deletion with undo
-        # https://stackoverflow.com/questions/43561558/using-tkinter-text-indexing-expressions-to-delete-last-line-of-text
+        self.text.insert("end-1c", textbox_message + "\n") # insert before trailing newline character that is always there
         
         self.text.configure(state='disabled') # lock writing to text box - so it can't be written into from GUI
         self.text.yview_pickplace(tk.END) # scroll to end
