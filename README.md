@@ -36,13 +36,13 @@ Run `scrabble_bank_gui.py`.
 ### Before the game starts:
 1. Set up a gmail account for sending the drawn tile lists.
 
-    It is highly recommended to set up a specialized account and not use a personal account for this, since sending messages from Python code code requires lowering the account security, and since the password to this account will be saved to a plain text file, to be used by the virtual scrabble bank. 
+    It is highly recommended to set up a specialized account and not use a personal account for this, since sending messages from Python code requires lowering the account security settings, and also because the password to this account will be saved to a plain text file, to be used by the virtual scrabble bank. 
 
     Turn "Allow less secures apps" to ON: https://myaccount.google.com/lesssecureapps?pli=1
 
     Alternatively, the virtual tile bank can be used without email messages, by unticking the "שלח מייל" option. Then the tile bank manager will have to see which tiles are drawn using the history text box, and let players know what tiles were drawn for them.
 
-2. Decide which tile distribution to use (if not all game sets used are the same, may decide to use the minimal amount available from each type, for example).
+2. Decide which tile distribution to use (if not all game sets used are the same, you can decide to use the minimal amount available from each type of tile, for example).
 
 3. Set up the game settings: click the settings button on the top left. Enter the gmail username and password for the account to be used to send drawn tiles to players, and set the tile distribution.
 
